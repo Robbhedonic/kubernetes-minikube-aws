@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prod
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: min-max
+  namespace: prod
+spec:
+  limits:
+  - type: Container
+    min:
+      memory: 100Mi
+      cpu: "100m"
+    max:
+      memory: 1Gi
+      cpu: "1"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podtest3
+  namespace: prod
+spec:
+  containers:
+  - name: cont1
+    image: nginx:alpine
+    resources:
+      limits:
+        memory: 50M
+        cpu: "50m"
+      requests:
+        memory: 400M
+        cpu: "300m"
