@@ -107,14 +107,23 @@ This is a practical example of cloud-native exposure in a production-like enviro
 
 ## 8. Architecture Diagram
 
-```mermaid
-flowchart LR
-    User[Client Browser] --> Internet[Internet]
-    Internet --> ALB[AWS Load Balancer]
-    ALB --> Ingress[Ingress Controller]
-    Ingress --> Service[Kubernetes Service]
-    Service --> Pods[Deployment Pods]
-    Pods --> App[2048 Game Application]
+```text
+Client Browser
+      │
+      ▼
+AWS Load Balancer
+      │
+      ▼
+Ingress Controller
+      │
+      ▼
+Kubernetes Service
+      │
+      ▼
+Deployment Pods
+      │
+      ▼
+2048 Game Application
 ```
 
 ## 9. Kubernetes Course Concepts Covered
@@ -154,16 +163,32 @@ kubectl describe svc <service-name>
 
 <p align="center">
   <img src="aws-eks-2048-deployment/screenshots/kubectl-get-nodes-and-get-all.png" alt="Cluster and resources overview" width="320" />
+  <br>
+  <em>Cluster and resources overview</em>
+</p>
+
+<p align="center">
   <img src="aws-eks-2048-deployment/screenshots/game2048-running.png" alt="Application running" width="320" />
+  <br>
+  <em>Application running</em>
 </p>
 
 <p align="center">
   <img src="aws-eks-2048-deployment/screenshots/load-balancer.png" alt="AWS Load Balancer" width="320" />
+  <br>
+  <em>AWS Load Balancer</em>
+</p>
+
+<p align="center">
   <img src="aws-eks-2048-deployment/screenshots/eks-cluster-active.png" alt="EKS cluster status" width="320" />
+  <br>
+  <em>EKS cluster status</em>
 </p>
 
 <p align="center">
   <img src="aws-eks-2048-deployment/screenshots/video-website-game.jpeg" alt="Project preview" width="320" />
+  <br>
+  <em>Project preview</em>
 </p>
 
 ## 11. Commands Used
