@@ -19,15 +19,15 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: sa-binding
-  namespace: default
+  name: cm-role
+  namespace: dev
 subjects:
-- kind: ServiceAccount
-  name: my-sa
+- kind: User
+  name: ricardo
   namespace: default
 roleRef:
   kind: Role
-  name: sa-reader
+  name: cm-role
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: v1
@@ -40,3 +40,5 @@ metadata:
 data:
   db_host: dev.host.local
   db_user: dev_user
+  script: |
+    echo DB host es $DB_HOST y DB user es $DB_USER > /urs/share/nginx/html/test.html
