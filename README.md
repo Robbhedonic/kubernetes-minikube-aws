@@ -152,11 +152,19 @@ kubectl describe svc <service-name>
 
 ### Screenshots
 
-- Cluster and resources overview: [aws-eks-2048-deployment/screenshots/kubectl-get-nodes-and-get-all.png](aws-eks-2048-deployment/screenshots/kubectl-get-nodes-and-get-all.png)
-- Application running: [aws-eks-2048-deployment/screenshots/game2048-running.png](aws-eks-2048-deployment/screenshots/game2048-running.png)
-- AWS Load Balancer: [aws-eks-2048-deployment/screenshots/load-balancer.png](aws-eks-2048-deployment/screenshots/load-balancer.png)
-- EKS cluster status: [aws-eks-2048-deployment/screenshots/eks-cluster-active.png](aws-eks-2048-deployment/screenshots/eks-cluster-active.png)
-- Project preview image: [aws-eks-2048-deployment/screenshots/video-website-game.jpeg](aws-eks-2048-deployment/screenshots/video-website-game.jpeg)
+<p align="center">
+  <img src="aws-eks-2048-deployment/screenshots/kubectl-get-nodes-and-get-all.png" alt="Cluster and resources overview" width="320" />
+  <img src="aws-eks-2048-deployment/screenshots/game2048-running.png" alt="Application running" width="320" />
+</p>
+
+<p align="center">
+  <img src="aws-eks-2048-deployment/screenshots/load-balancer.png" alt="AWS Load Balancer" width="320" />
+  <img src="aws-eks-2048-deployment/screenshots/eks-cluster-active.png" alt="EKS cluster status" width="320" />
+</p>
+
+<p align="center">
+  <img src="aws-eks-2048-deployment/screenshots/video-website-game.jpeg" alt="Project preview" width="320" />
+</p>
 
 ## 11. Commands Used
 
